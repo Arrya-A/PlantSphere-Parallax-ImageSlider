@@ -36,22 +36,19 @@ const SliderProducts = () => {
     };
 
     return (
-        <section className='py-5' >
-            <h2 className='text-center mb-5'>Shop Our Green Delights</h2>
-            <Slider {...settings}>
-                {images.map((img, index) => (
-                    <div key={index} className='d-flex flex-column align-items-center' >
-                        <img
-                            src={img}
-                            alt={`Slide ${index + 1}`}
-                            className='rounded-5'
-                            style={{ height: '200px', width: '200px', objectFit: 'cover' }}
-                        />
-                        <h2 className="card-heading ">{headings[index]}</h2>
-                    </div>
-                ))}
-            </Slider>
-        </section>
+        <>
+            <section className='pb-5 pt-4' >
+                <h2 className='text-center mb-4'>Shop Our Green Delights</h2>
+                <Slider {...settings}>
+                    {images.map((img, index) => (
+                        <div key={index} className='d-flex flex-column align-items-center' >
+                            <img src={img} alt={`Slide ${index + 1}`} className='rounded-5' style={{ height: '200px', width: '200px', objectFit: 'cover' }} />
+                            <h2 className="card-heading ">{headings[index]}</h2>
+                        </div>
+                    ))}
+                </Slider>
+            </section>
+        </>
     )
 }
 
